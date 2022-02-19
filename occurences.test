@@ -1,0 +1,16 @@
+package mypackage;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class occurencesTest {
+
+    @Test
+    void Test1() {
+        occurences t1 = new occurences();
+        assertNotNull(t1.occ("deepanshu"));
+    }
+}
