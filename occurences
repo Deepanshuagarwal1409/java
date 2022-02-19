@@ -4,18 +4,27 @@ package mypackage;
 import java.util.*;
 
 public class occurences {
-    public static void main(String[] args) {
-        String str = "java";
-        HashMap <Character, Integer> hMap = new HashMap<>();
+    public static HashMap<Character, Integer> occ(String str) {
 
-        for(int i = str.length() - 1; i >= 0; i--) {
+        HashMap<Character, Integer> hMap = new HashMap<>();
+
+        for (int i = str.length() - 1; i >= 0; i--) {
             if (hMap.containsKey(str.charAt(i))) {
                 int count = hMap.get(str.charAt(i));
                 hMap.put(str.charAt(i), ++count);
             } else {
-                hMap.put(str.charAt(i),1);
+                hMap.put(str.charAt(i), 1);
             }
         }
-        System.out.println(hMap);
+        return hMap;
     }
+        public static void main (String[]args){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a string");
+            String st = sc.next();
+            HashMap<Character, Integer> hp = occ(st);
+            System.out.println(hp);
+
+        }
 }
+
