@@ -1,0 +1,18 @@
+package mypackage;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import mypackage.nonRepeating;
+class nonRepeatingTest {
+
+    @Test
+    void Test1() {
+        nonRepeating t1 = new nonRepeating();
+        assertEquals(18, t1.firstNonRepeating((new int[]{15, 18, 15, 30, 25, 96}), 6));
+    }
+
+    @Test
+    void Test2() {
+        nonRepeating t2 = new nonRepeating();
+        assertEquals(80, t2.firstNonRepeating((new int[]{56, 86, 80, 86, 25, 56, 90, 150}), 8));
+    }
+}
