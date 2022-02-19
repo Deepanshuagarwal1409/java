@@ -1,29 +1,31 @@
 //program to check whether two strings are anagram or not?
 package mypackage;
-import java.util.Arrays;
-
+import java.util.*;
 public class Anagram {
-    public static void main(String[] args) {
-        String str1 = "abcd";
-        String str2 = "dbca";
+    static boolean anag(String str1, String str2) {
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
-        if(str1.length() == str2.length()) {
+        if (str1.length() == str2.length()) {
             char[] charArray1 = str1.toCharArray();
             char[] charArray2 = str2.toCharArray();
             Arrays.sort(charArray1);
             Arrays.sort(charArray2);
             boolean result = Arrays.equals(charArray1, charArray2);
-
-            if(result) {
-                System.out.println(str1 + " and " + str2 + " are anagram.");
-            }
-            else {
-                System.out.println(str1 + " and " + str2 + " are not anagram.");
+            if (result) {
+                return true;
             }
         }
-
-
+    return false;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first string");
+        String st1 = sc.next();
+        System.out.println("Enter Second String");
+        String st2 = sc.next();
+        Boolean an = anag(st1 , st2);
+        System.out.println(an);
     }
 }
+
 
