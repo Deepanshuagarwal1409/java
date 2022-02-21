@@ -1,0 +1,23 @@
+package my package;
+import java.util.ArrayList;
+public class CustomProperty {
+    public String keyvalue;
+public CustomProperty(String keyvalue){
+    this.keyvalue = keyvalue;
+}
+public String valCustomProperty(){
+    return this.keyvalue;
+}
+    public static void main(String[] args) {
+        ArrayList<CustomProperty> arraykey = new ArrayList<>();
+        arraykey.add(new CustomProperty("ass"));
+        arraykey.add(new CustomProperty("Adjb"));
+        arraykey.add(new CustomProperty("mno"));
+        arraykey.add(new CustomProperty("where"));
+        arraykey.add(new CustomProperty("thanks"));
+        arraykey.sort((o1,o2)-> o1.valCustomProperty().compareTo(o2.valCustomProperty()));
+        for(CustomProperty x : arraykey){
+            System.out.println(x.valCustomProperty());
+        }
+    }
+}
