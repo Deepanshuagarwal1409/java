@@ -1,4 +1,4 @@
-package my package;
+package mypackage;
 import java.util.ArrayList;
 public class CustomProperty {
     public String keyvalue;
