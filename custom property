@@ -10,7 +10,7 @@ public String valCustomProperty(){
 }
     public static void main(String[] args) {
         ArrayList<CustomProperty> arraykey = new ArrayList<>();
-        arraykey.add(new CustomProperty("ass"));
+        arraykey.add(new CustomProperty("ajj"));
         arraykey.add(new CustomProperty("Adjb"));
         arraykey.add(new CustomProperty("mno"));
         arraykey.add(new CustomProperty("where"));
